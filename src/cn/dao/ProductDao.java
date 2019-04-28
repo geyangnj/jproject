@@ -6,6 +6,7 @@ import cn.utils.JdbcUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 // 主要是用来完成对Product表的CRUD操作
 public class ProductDao {
@@ -15,11 +16,14 @@ public class ProductDao {
         // ctrl + / 注释当前行
         Product product = new Product();
         product.setId(1);
-        product.setName("小米手机");
-        product.setPrice(2999);
+        product.setName("红米手机");
+        product.setPrice(3999);
         product.setRemark("手机介绍");
         dao.update(product);
-//        dao.delete(4);
+    }
+
+    public List<Product> query(String name){
+        return null;
     }
 
     // 编写一个方法用来实现数据插入功能
